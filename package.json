@@ -1,0 +1,22 @@
+{
+  "name": "@roki/blog",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "astro": "astro",
+    "build": "astro build",
+    "preview": "astro preview",
+    "start": "astro dev",
+    "start:dev": "astro dev"
+  },
+  "dependencies": {
+    "@astrojs/react": "^1.2.2",
+    "@astrojs/vercel": "^2.3.4",
+    "astro": "^1.6.11",
+    "feather-icons": "^4.29.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-feather": "^2.0.10"
+  }
+}

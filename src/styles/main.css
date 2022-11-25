@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&display=swap");
+
+:root {
+  --mainTextColor-light: #000;
+  --secondaryTextColor-light: rgb(51 51 51);
+  --mainLinkColor-light: #0da2b8;
+  --mainBorderColor-light: rgb(218, 218, 218);
+  --mainBgColor-light: rgb(249, 250, 251);
+
+  --mainTextColor-dark: #fff;
+  --secondaryTextColor-dark: #cbc8d0;
+  --mainLinkColor-dark: rgb(30, 190, 214);
+  --mainBorderColor-dark: #2b3031;
+  --mainBgColor-dark: #052028;
+
+  --mainTextColor: var(--mainTextColor-dark);
+  --secondaryTextColor: var(--secondaryTextColor-dark);
+  --mainLinkColor: var(--mainLinkColor-dark);
+  --mainBorderColor: var(--mainBorderColor-dark);
+  --mainBgColor: var(--mainBgColor-dark);
+}
+
+* {
+  font-family: "Readex Pro";
+  line-height: 1.9em;
+  box-sizing: border-box;
+  color: var(--mainTextColor);
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--mainBgColor);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+p,
+span,
+small,
+li {
+  color: var(--secondaryTextColor);
+  font-size: 1.1em;
+}
+
+small {
+  font-size: 0.8em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--mainLinkColor);
+  font-weight: 500;
+}
+
+li {
+  line-height: 1.9em;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2em;
+}
+
+#menu--container {
+  display: flex;
+}
+
+#menu--container a {
+  margin: 0 1em;
+}
+
+#logo {
+  width: 70px;
+}
+
+#menu--container {
+  padding: 14px;
+}
+
+#blogs {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  padding: 0.5em 0;
+}
+
+.container--main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.section--page {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.line-break {
+  background-color: var(--mainBorderColor);
+  height: 1px;
+}
+
+.btn {
+  border: 1px solid var(--mainBorderColor);
+  color: var(--secondaryTextColor);
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+}
+
+.btn--md {
+  font-size: 0.9em;
+}
+
+.card--article-preview {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  align-items: center;
+  padding: 0.5em 0;
+  border-bottom: 1px solid var(--mainBorderColor);
+}
+
+.card--article-preview strong {
+  font-weight: 400;
+}
+
+.card--article-preview small {
+  font-weight: 100;
+}
+
+.article-preview__body {
+  display: flex;
+
+  align-items: center;
+}
+
+.article-preview__body > h3 {
+  margin-right: 0.5em;
+}
+
+#navbar {
+  display: flex;
+  gap: 2em;
+}
+
+.astro-code {
+  padding: 1em;
+  border-radius: 10px;
+  background-color: #0c0c0c !important;
+}
+
+.astro-code code {
+  padding: 0;
+
+  background-color: #0c0c0c !important;
+}
+
+code {
+  background-color: #3d3d3d !important;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
+blockquote {
+  background-color: #0c0c0c !important;
+  padding: 0.5em 1em;
+  border-left: 5px solid #055f7a;
+}
+
+.astro-code span {
+  font-family: "Fira Code";
+  font-size: 1em;
+}
+
+@media (max-width: 600px) {
+  .container--main {
+    padding: 1em;
+  }
+}

@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ArticlePreview from "../components/ArticlePreview.astro";
+// import { ArrowRight } from "react-feather";
+
+let posts = (await Astro.glob("./posts/*/*.{md,mdx}")).sort(
+  (a, b) =>
+    new Date(b.frontmatter.date).valueOf() -
+    new Date(a.frontmatter.date).valueOf()
+);
+
+// posts = [posts[0],posts[1], posts[2]] as any
+---
+
+<Layout title="Roki Miftah Kamaludin">
+  <section class="section--page">
+    <a id="blog"></a>
+    <center>
+      <h3>Articles</h3>
+    </center>
+    {posts.map((post) => <ArticlePreview frontmatter={post.frontmatter} />)}
+  </section>
+
+  <!-- <section id="blogs">
+    <a href="/blogs" target="_blank">Show All Blogs</a>
+    <ArrowRight size={18} />
+  </section> -->
+</Layout>

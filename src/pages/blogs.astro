@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ArticlePreview from "../components/ArticlePreview.astro";
+
+let posts = (await Astro.glob("./posts/*/*.{md,mdx}")).sort(
+  (a, b) =>
+    new Date(b.frontmatter.date).valueOf() -
+    new Date(a.frontmatter.date).valueOf()
+);
+---
+
+<Layout title="Roki Miftah Kamaludin">
+  <section class="section--page">
+    <a id="blog"></a>
+    <h3>Articles</h3>
+
+    {posts.map((post) => <ArticlePreview frontmatter={post.frontmatter} />)}
+  </section>
+</Layout>
